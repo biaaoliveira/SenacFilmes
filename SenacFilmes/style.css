@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & family= Montserrat:wght@700 & family= Roboto:wght@400;700 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*pseudo ELEMENTO*/
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2D2D2D;
+    --cor-destaque: #FFB800;
+    --font-color-principal: #FFF;
+    --font-titulo: 'Bebas Neue';
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    --font-size: 10px;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var (--font-principal);
+}
+
+a {
+    color: var(--font-color-principal);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+   
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.04em;
+    height: 42px;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 2rem;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul a{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+}
+
+#hero {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+}
+
+#hero::before {
+    width: 900px;
+    height: 207.54px;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/5vUux2vNUTqwCzb7tVcH18XnsF.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.0, 5);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(2);
+}
+
+@keyframes zoom {
+0%{
+    transform:scale(1);
+
+}
+100%{
+    transform: scale(2);
+}
+   
+   
+}
+
+#hero p {
+    font-size: 36px;
+    font-family: var(--font-destaque);
+    padding-left: 46px;
+    padding-top: 115px;
+    text-shadow: 0px 4px 4px #000000;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+    position: absolute;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: var(--font-principal);
+    font-weight: 500;
+    border-left: 4px solid var(--cor-destaque);
+    margin: 1.6rem;
+    padding-left: .4rem;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+
+}
+
+.secao {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    position: relative;
+}
+
+.card .icone-favorito {
+    position:absolute;
+    font-size: 2rem;
+    right: 1rem;
+    text-shadow: 2px 2px 2px #000;
+    filter: opacity(0);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card:hover .icone-favorito{
+    filter: opacity(1);
+}
+
+.card img:hover {
+    filter: opacity(.8);
+}
+
+.card p:first-of-type {
+    font-size: 16px;
+    font-family: var(--font-principal);
+    font-weight: 400;
+    margin-top: .5rem;
+    font-style: normal;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.card p:nth-of-type(2) {
+    filter: opacity(.8);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+}
+
+.botao {
+    background-color: #0F99FF;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    transition: box-shadow, 1s ease-in-out;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+}
+
+.botao:hover {
+    box-shadow: 0 0 8px #FFF;
+}

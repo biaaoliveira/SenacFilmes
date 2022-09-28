@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundaria: #2D2D2D;
+    --cor-destaque: #E08E00;
+    --cor-segundária: #0F99FF;
+    --cor-page: #FF0066;
+    --cor-desc: #747474;
+    --font-color-principal: #fff;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+.fileira {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elenco {
+    margin: 3rem 0rem 0rem 3rem;
+}
+
+
+
+.section {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#heroPage {
+    height: 30rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+#heroPage::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(1);
+}
+
+#heroPage p {
+    font-size: 14px;
+    font-family: var(--font-destaque);
+    padding-left: 4.8rem;
+    padding-top: 4.8rem;
+    text-shadow: 2px 2px 2px #111;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+}
+
+.pinoquio::before {
+    background-image: url("https://cinepop.com.br/wp-content/uploads/2022/09/Gepeto-e-Pinoquio.jpeg.webp");
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: row;
+}
+
+.detalhes img {
+    border-radius: 5px;
+}
+
+#heroPage .detalhes p:nth-of-type(1) {
+    position: absolute;
+    font-size: 36px;
+    font-style: normal;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 44px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#heroPage .detalhes p:nth-of-type(2) {
+    width: 534px;
+    height: 155px;
+    filter: opacity(.7);
+    text-align: justify;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+}
+
+#heroPage img {
+    margin: 3rem;
+    position: relative;
+}
+
+.detalhesMedia {
+    display: none;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-principal);
+    font-weight: 700;
+    border-left: 4px solid var(--cor-page);
+    margin: 1.6rem;
+    margin-top: 1rem;
+    padding-left: .4rem;
+}
+
+.botoes {
+    margin-top: 3rem;
+}
+
+.botaoPage {
+    background-color: var(--cor-page);
+    font-size: 1.4rem;
+    font-family: var(--font-destaque);
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    margin-left: 3rem;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.icon {
+    position: absolute;
+    font-size: 2rem;
+    margin-top: -.4rem;
+    margin-left: -2rem;
+}
+
+.ator {
+    width: 14.3rem;
+    height: 16.5rem;
+    background-color: var(--bg-secundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 5.5rem;
+    position: relative;
+    border-radius: 5px;
+}
+
+.ator img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    cursor: pointer;
+    top: -5.5rem;
+    position: relative;
+    border-radius: 100%;
+    border: 4px solid white;
+}
+
+.ator p:first-of-type {
+    font-size: 1.6rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    margin-top: -4rem;
+}
+
+.ator p:nth-of-type(2) {
+    font-size: 1.6rem;
+    color: var(--cor-desc);
+    margin-top: 2rem;
+}
+
+.ficha {
+    width: 20rem;
+    height: 41rem;
+    background-color: var(--bg-secundaria);
+    margin: 1rem;
+    margin-top: -13.6rem;
+    position: relative;
+    border-radius: 5px;
+}
+
+.ficha p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.ficha p:nth-of-type(odd) {
+    font-size: 1.6rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.ficha p:nth-of-type(even) {
+    font-size: 1.4rem;
+    color: var(--cor-desc);
+    margin-top: 1rem;
+}
+
+@media (max-width: 1090px) {
+    #heroPage{
+        height: initial;
+    }
+    
+    .ficha {
+        margin-top: -11.6em;
+    }
+}
+
+@media (max-width: 820px) {
+    .ficha {
+        height: 47rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #heroPage {
+        height: inherit;
+    }
+}
+
+@media (max-width: 625px) {
+    #heroPage .detalhes p {
+        padding-left: 1rem;
+        padding-top: 2rem;
+    }
+
+    #heroPage .detalhes p:nth-of-type(2) {
+        width: 90%;
+    }
+}
+
+@media (max-width: 580px) {
+    .ficha {
+        margin-top: inherit;
+    }
+}
